@@ -33,7 +33,9 @@ namespace BudgetingSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            AddExpense addExpense = new AddExpense();
+            addExpense.Show();
+            this.Close();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

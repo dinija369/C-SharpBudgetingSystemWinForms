@@ -28,6 +28,9 @@ namespace BudgetingSystem
         private Decimal totalSpentDb = 0;
         private Decimal allowance = 0;
 
+        //used for total spent in Expense method
+        private float totalSpent = 0f;
+
         private static void updateAllowance(string department, string dateTo, float allowancePerTeam)
         {
             string date = DateTime.Now.ToString("dd/MM/yyyy");
@@ -53,9 +56,6 @@ namespace BudgetingSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string connString = ConnectionString.Connection();
-            SqlConnection connection = new SqlConnection(connString);
-
             allowancePerPersonString = (String)textBox1.Text;
             dateTo = (String)textBox3.Text;
             peopleInTeamString = (String)textBox2.Text;
@@ -96,7 +96,6 @@ namespace BudgetingSystem
             {
                 MessageBox.Show(ex.Message);
             }
-            finally { connection.Close(); }
 
             string department = teamSession.getSession();
             allowancePerTeam = allowancePerPerson * peopleInTeam;
@@ -209,6 +208,47 @@ namespace BudgetingSystem
             }
             return totalSpentDb;
         }
+
+        public void TotalSpent(float expenseMoney)
+        {
+            string department = teamSession.getSession();
+            string connString = ConnectionString.Connection();
+            SqlConnection connection = new SqlConnection(connString);
+            connection.Open();
+            string query = "SELECT [Total_spent] FROM dbo.Allowance_table WHERE [Department] = @department";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@department", department);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            try
+            {
+                reader.Read();
+                totalSpent = (float)reader.GetDecimal(0);
+                connection.Close();
+            }
+            catch { totalSpent = 0; }
+
+            totalSpent += expenseMoney;
+            setTotalSpent(department, totalSpent);
+        }
+
+        private static void setTotalSpent(string department, float totalSpent)
+        {
+            string connString = ConnectionString.Connection();
+            SqlConnection connection = new SqlConnection(connString);
+            connection.Open();
+            string query = "UPDATE dbo.Allowance_table SET [Total_spent] = @totalSpent WHERE [Department] = @department";
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@department", department);
+            command.Parameters.AddWithValue("@totalSpent", totalSpent);
+
+            command.ExecuteReader();
+            connection.Close();
+        }
+
 
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace BudgetingSystem
 {
-    partial class AddAllowance
+    partial class Notifications
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teamnotificationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.budgetManagerDataSet1 = new BudgetingSystem.BudgetManagerDataSet1();
+            this.button7 = new System.Windows.Forms.Button();
+            this.team_notificationsTableAdapter = new BudgetingSystem.BudgetManagerDataSet1TableAdapters.Team_notificationsTableAdapter();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -50,7 +52,11 @@
             this.button8 = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamnotificationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.budgetManagerDataSet1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -58,94 +64,97 @@
             this.panel6.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.AutoSize = true;
             this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 559);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(1, 561);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(987, 0);
-            this.flowLayoutPanel3.TabIndex = 7;
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(953, 51);
+            this.flowLayoutPanel3.TabIndex = 9;
             // 
-            // textBox3
+            // label5
             // 
-            this.textBox3.Location = new System.Drawing.Point(474, 360);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(209, 22);
-            this.textBox3.TabIndex = 29;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Roboto Condensed", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(412, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(333, 72);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Notifications";
             // 
-            // label4
+            // dataGridView1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(470, 337);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 20);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Date to";
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.departmentDataGridViewTextBoxColumn,
+            this.messageDataGridViewTextBoxColumn,
+            this.senderDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.teamnotificationsBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(210, 141);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(727, 305);
+            this.dataGridView1.TabIndex = 13;
             // 
-            // textBox2
+            // departmentDataGridViewTextBoxColumn
             // 
-            this.textBox2.Location = new System.Drawing.Point(474, 303);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 22);
-            this.textBox2.TabIndex = 25;
+            this.departmentDataGridViewTextBoxColumn.DataPropertyName = "Department";
+            this.departmentDataGridViewTextBoxColumn.HeaderText = "Department";
+            this.departmentDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.departmentDataGridViewTextBoxColumn.Name = "departmentDataGridViewTextBoxColumn";
+            this.departmentDataGridViewTextBoxColumn.Width = 125;
             // 
-            // textBox1
+            // messageDataGridViewTextBoxColumn
             // 
-            this.textBox1.Location = new System.Drawing.Point(474, 242);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 22);
-            this.textBox1.TabIndex = 24;
+            this.messageDataGridViewTextBoxColumn.DataPropertyName = "Message";
+            this.messageDataGridViewTextBoxColumn.HeaderText = "Message";
+            this.messageDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.messageDataGridViewTextBoxColumn.Name = "messageDataGridViewTextBoxColumn";
+            this.messageDataGridViewTextBoxColumn.Width = 125;
             // 
-            // label3
+            // senderDataGridViewTextBoxColumn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(472, 280);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 20);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "People in a team";
+            this.senderDataGridViewTextBoxColumn.DataPropertyName = "Sender";
+            this.senderDataGridViewTextBoxColumn.HeaderText = "Sender";
+            this.senderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.senderDataGridViewTextBoxColumn.Name = "senderDataGridViewTextBoxColumn";
+            this.senderDataGridViewTextBoxColumn.Width = 125;
             // 
-            // label1
+            // teamnotificationsBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(472, 219);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 20);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Allowance per person";
+            this.teamnotificationsBindingSource.DataMember = "Team_notifications";
+            this.teamnotificationsBindingSource.DataSource = this.budgetManagerDataSet1;
             // 
-            // button3
+            // budgetManagerDataSet1
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.button3.Font = new System.Drawing.Font("Roboto Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(534, 426);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 32);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.budgetManagerDataSet1.DataSetName = "BudgetManagerDataSet1";
+            this.budgetManagerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label6
+            // button7
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto Condensed", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(422, 90);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(299, 57);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Add allowance";
+            this.button7.BackColor = System.Drawing.Color.LightCoral;
+            this.button7.Font = new System.Drawing.Font("Roboto Condensed", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(-19, -15);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(90, 72);
+            this.button7.TabIndex = 14;
+            this.button7.Text = "+";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // team_notificationsTableAdapter
+            // 
+            this.team_notificationsTableAdapter.ClearBeforeFill = true;
             // 
             // flowLayoutPanel1
             // 
@@ -160,9 +169,8 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(175, 559);
-            this.flowLayoutPanel1.TabIndex = 44;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(177, 559);
+            this.flowLayoutPanel1.TabIndex = 45;
             // 
             // panel3
             // 
@@ -182,7 +190,7 @@
             this.button2.Location = new System.Drawing.Point(-3, -8);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 67);
+            this.button2.Size = new System.Drawing.Size(177, 67);
             this.button2.TabIndex = 4;
             this.button2.Text = "Home";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,19 +203,19 @@
             this.panel4.Location = new System.Drawing.Point(3, 61);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(154, 57);
+            this.panel4.Size = new System.Drawing.Size(164, 57);
             this.panel4.TabIndex = 6;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Salmon;
+            this.button1.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button1.Location = new System.Drawing.Point(-3, -32);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 118);
+            this.button1.Size = new System.Drawing.Size(177, 118);
             this.button1.TabIndex = 5;
             this.button1.Text = "Add allowance";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -219,7 +227,7 @@
             this.panel5.Controls.Add(this.button4);
             this.panel5.Location = new System.Drawing.Point(3, 125);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(154, 43);
+            this.panel5.Size = new System.Drawing.Size(164, 43);
             this.panel5.TabIndex = 7;
             // 
             // button4
@@ -231,7 +239,7 @@
             this.button4.Location = new System.Drawing.Point(-3, -17);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(162, 75);
+            this.button4.Size = new System.Drawing.Size(177, 75);
             this.button4.TabIndex = 6;
             this.button4.Text = "Add expense";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,12 +258,12 @@
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Salmon;
             this.button5.Location = new System.Drawing.Point(-3, -28);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(162, 118);
+            this.button5.Size = new System.Drawing.Size(164, 118);
             this.button5.TabIndex = 6;
             this.button5.Text = "Notifications";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -267,7 +275,7 @@
             this.panel13.Controls.Add(this.button8);
             this.panel13.Location = new System.Drawing.Point(3, 242);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(159, 56);
+            this.panel13.Size = new System.Drawing.Size(164, 56);
             this.panel13.TabIndex = 8;
             // 
             // button8
@@ -279,7 +287,7 @@
             this.button8.Location = new System.Drawing.Point(-3, -16);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(175, 82);
+            this.button8.Size = new System.Drawing.Size(177, 82);
             this.button8.TabIndex = 8;
             this.button8.Text = "Reports";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -291,7 +299,7 @@
             this.panel14.Controls.Add(this.button9);
             this.panel14.Location = new System.Drawing.Point(3, 304);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(159, 55);
+            this.panel14.Size = new System.Drawing.Size(154, 55);
             this.panel14.TabIndex = 9;
             // 
             // button9
@@ -303,49 +311,56 @@
             this.button9.Location = new System.Drawing.Point(-3, -9);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(175, 73);
+            this.button9.Size = new System.Drawing.Size(167, 73);
             this.button9.TabIndex = 8;
             this.button9.Text = "Profile";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button6
+            // panel1
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkRed;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(929, 17);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(31, 27);
-            this.button6.TabIndex = 45;
-            this.button6.Text = "X";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Location = new System.Drawing.Point(349, 61);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(45, 42);
+            this.panel1.TabIndex = 46;
             // 
-            // AddAllowance
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DarkRed;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(906, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(31, 27);
+            this.button3.TabIndex = 47;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Notifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(987, 559);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.flowLayoutPanel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddAllowance";
+            this.MaximumSize = new System.Drawing.Size(987, 559);
+            this.Name = "Notifications";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Notifications_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamnotificationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.budgetManagerDataSet1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -353,6 +368,7 @@
             this.panel6.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,14 +376,15 @@
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button7;
+        private BudgetManagerDataSet1 budgetManagerDataSet1;
+        private System.Windows.Forms.BindingSource teamnotificationsBindingSource;
+        private BudgetManagerDataSet1TableAdapters.Team_notificationsTableAdapter team_notificationsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn departmentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senderDataGridViewTextBoxColumn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
@@ -381,6 +398,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button3;
     }
 }

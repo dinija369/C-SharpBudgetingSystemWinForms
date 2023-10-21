@@ -47,6 +47,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BudgetManagerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BudgetManagerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetManagerDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BudgetManagerDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubmitNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubmitNotification.Designer.cs">
+      <DependentUpon>SubmitNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications.Designer.cs">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeamSession.cs" />
     <Compile Include="ConnectionString.cs" />
     <Compile Include="AddAllowance.cs">
@@ -93,8 +127,20 @@
     <EmbeddedResource Include="AddExpense.resx">
       <DependentUpon>AddExpense.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Notifications.resx">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubmitNotification.resx">
+      <DependentUpon>SubmitNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -114,6 +160,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="BudgetManagerDataSet.xsc">
+      <DependentUpon>BudgetManagerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BudgetManagerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BudgetManagerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BudgetManagerDataSet.xss">
+      <DependentUpon>BudgetManagerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BudgetManagerDataSet1.xsc">
+      <DependentUpon>BudgetManagerDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BudgetManagerDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BudgetManagerDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BudgetManagerDataSet1.xss">
+      <DependentUpon>BudgetManagerDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

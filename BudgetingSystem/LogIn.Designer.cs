@@ -36,10 +36,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -121,57 +121,63 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Location = new System.Drawing.Point(2, 1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(996, 101);
-            this.panel2.TabIndex = 8;
+            this.panel2.Size = new System.Drawing.Size(987, 84);
+            this.panel2.TabIndex = 20;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DarkRed;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(924, 24);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(31, 27);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(10, 30);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(74, 31);
             this.panel1.TabIndex = 4;
             // 
-            // label4
+            // label6
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto Slab", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label4.Location = new System.Drawing.Point(-3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 31);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Dinija";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto Slab", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label6.Location = new System.Drawing.Point(2, -6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 31);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Dinija";
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(2, 511);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 521);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(996, 54);
-            this.flowLayoutPanel3.TabIndex = 9;
-            // 
-            // button3
-            // 
-            this.button3.ForeColor = System.Drawing.Color.Firebrick;
-            this.button3.Location = new System.Drawing.Point(932, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(61, 27);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Close";
-            this.button3.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(987, 38);
+            this.flowLayoutPanel3.TabIndex = 21;
             // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1000, 563);
+            this.ClientSize = new System.Drawing.Size(987, 559);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBox2);
@@ -185,6 +191,7 @@
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "LogIn";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dinija";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel2.ResumeLayout(false);
@@ -206,7 +213,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button button3;
     }

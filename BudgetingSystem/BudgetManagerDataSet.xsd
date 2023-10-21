@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BudgetManagerDataSet" targetNamespace="http://tempuri.org/BudgetManagerDataSet.xsd" xmlns:mstns="http://tempuri.org/BudgetManagerDataSet.xsd" xmlns="http://tempuri.org/BudgetManagerDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BudgetManagerConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BudgetManagerConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BudgetingSystem.Properties.Settings.GlobalReference.Default.BudgetManagerConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Expense_tableTableAdapter" GeneratorDataComponentClassName="Expense_tableTableAdapter" Name="Expense_table" UserDataComponentName="Expense_tableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BudgetManagerConnectionString (Settings)" DbObjectName="BudgetManager.dbo.Expense_table" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Expense, Comment, Date FROM dbo.Expense_table</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Expense" DataSetColumn="Expense" />
+              <Mapping SourceColumn="Comment" DataSetColumn="Comment" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BudgetManagerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="BudgetManagerDataSet" msprop:Generator_DataSetName="BudgetManagerDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Expense_table" msprop:Generator_RowEvHandlerName="Expense_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="Expense_tableRowDeleted" msprop:Generator_RowDeletingName="Expense_tableRowDeleting" msprop:Generator_RowEvArgName="Expense_tableRowChangeEvent" msprop:Generator_TablePropName="Expense_table" msprop:Generator_RowChangedName="Expense_tableRowChanged" msprop:Generator_RowChangingName="Expense_tableRowChanging" msprop:Generator_TableClassName="Expense_tableDataTable" msprop:Generator_RowClassName="Expense_tableRow" msprop:Generator_TableVarName="tableExpense_table" msprop:Generator_UserTableName="Expense_table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Expense" msprop:Generator_ColumnPropNameInRow="Expense" msprop:Generator_ColumnPropNameInTable="ExpenseColumn" msprop:Generator_ColumnVarNameInTable="columnExpense" msprop:Generator_UserColumnName="Expense" type="xs:decimal" />
+              <xs:element name="Comment" msprop:Generator_ColumnPropNameInRow="Comment" msprop:Generator_ColumnPropNameInTable="CommentColumn" msprop:Generator_ColumnVarNameInTable="columnComment" msprop:Generator_UserColumnName="Comment">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

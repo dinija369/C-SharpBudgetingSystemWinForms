@@ -234,6 +234,58 @@ namespace BudgetingSystem
             setTotalSpent(department, totalSpent);
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddExpense expense = new AddExpense();
+            expense.Show();
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Notifications notifications = new Notifications();
+            notifications.Show();
+            this.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Reports reports = new Reports();
+            reports.Show();
+            this.Close();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile();
+            profile.Show();
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddAllowance addAllowance = new AddAllowance();
+            addAllowance.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TeamsHome teamsHome = new TeamsHome();
+            teamsHome.Show();
+            this.Close();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private static void setTotalSpent(string department, float totalSpent)
         {
             string connString = ConnectionString.Connection();
@@ -249,6 +301,34 @@ namespace BudgetingSystem
             connection.Close();
         }
 
+        public Decimal getRemainingBalance()
+        {
+            Decimal remainingBalance = 0;
+            string department = teamSession.getSession();
+            string connString = ConnectionString.Connection();
+            SqlConnection connection = new SqlConnection(connString);
+            connection.Open();
+            string query = "SELECT [Money_left] FROM dbo.Allowance_table WHERE [Department] = @department";
+            SqlCommand command = new SqlCommand(query, connection);
 
+            command.Parameters.AddWithValue("@department", department);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                try
+                {
+                    remainingBalance = reader.GetDecimal(0);
+                }
+                catch (System.Data.SqlTypes.SqlNullValueException)
+                {
+
+                }
+                connection.Close();
+            }
+            return remainingBalance;
+        }
     }
+
 }
